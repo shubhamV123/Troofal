@@ -1,6 +1,7 @@
 <aside class="al-sidebar" ng-swipe-right="$baSidebarService.setMenuCollapsed(false)" ng-swipe-left="$baSidebarService.setMenuCollapsed(true)"
        ng-mouseleave="hoverElemTop=selectElemTop">
   <ul class="al-sidebar-list" slimscroll="{height: '{{menuHeight}}px'}" slimscroll-watch="menuHeight" >
+    <img ng-src="{{::( 'Profilepic' | profilePicture )}}" style="width:75%;height:120px;padding-left:40px;padding-bottom:15px" >    
     <li ng-repeat="item in ::menuItems" class="al-sidebar-list-item"
         ng-class="::{'with-sub-menu': item.subMenu}" ui-sref-active="selected"
         ba-sidebar-toggling-item="item">
